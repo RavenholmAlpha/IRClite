@@ -1,0 +1,155 @@
+.chat-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ededed; /* 微信风格的背景色 */
+}
+
+.chat-layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background-color: #f7f7f7; /* 微信风格的顶部栏背景色 */
+  border-bottom: 1px solid #d9d9d9; /* 微信风格的边框色 */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  height: 58px; /* 微信风格的顶部栏高度 */
+}
+
+.chat-layout-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-toggle {
+  padding: 6px 8px;
+  font-size: 18px; /* 增大图标尺寸 */
+  color: #333; /* 微信风格的图标颜色 */
+}
+
+.app-title {
+  margin: 0;
+  font-size: 17px; /* 微信风格的标题字体大小 */
+  font-weight: 500; /* 微信风格的字体粗细 */
+  color: #111; /* 微信风格的标题颜色 */
+}
+
+.chat-layout-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-info {
+  font-size: 14px;
+  color: #333;
+}
+
+.chat-layout-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.chat-layout-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  background-color: #f7f7f7; /* 微信风格的侧边栏背景色 */
+  border-right: 1px solid #d9d9d9; /* 微信风格的边框色 */
+  transition: margin-left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 0; /* 移除内边距 */
+  border-bottom: 1px solid #d9d9d9; /* 微信风格的边框色 */
+  background-color: #f7f7f7; /* 微信风格的导航栏背景色 */
+}
+
+.nav-button {
+  margin-bottom: 0; /* 移除外边距 */
+  text-align: left;
+  justify-content: flex-start;
+  padding: 12px 16px; /* 增加内边距 */
+  border-radius: 0; /* 移除圆角 */
+  border-bottom: 1px solid #e9ecef; /* 添加底部边框 */
+  font-size: 16px; /* 微信风格的字体大小 */
+  color: #333; /* 微信风格的文字颜色 */
+}
+
+.nav-button:last-child {
+  border-bottom: none; /* 最后一个按钮不显示底部边框 */
+}
+
+.nav-sub {
+  margin-left: 16px;
+  margin-bottom: 0; /* 移除外边距 */
+  padding: 10px 16px; /* 调整内边距 */
+  font-size: 15px; /* 微信风格的子菜单字体大小 */
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff; /* 微信风格的内容区域背景色 */
+}
+
+.chat-layout-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #f7f7f7; /* 微信风格的主内容区背景色 */
+}
+
+.chat-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #999; /* 微信风格的占位文字颜色 */
+  text-align: center;
+}
+
+.chat-welcome h2 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333; /* 微信风格的标题颜色 */
+}
+
+.chat-welcome p {
+  font-size: 16px;
+  color: #999; /* 微信风格的描述文字颜色 */
+}
+
+.auth-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f7f7f7; /* 微信风格的背景色 */
+}
+
+@media (max-width: 768px) {
+  .chat-layout-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 99;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-layout-main {
+    width: 100%;
+  }
+}
